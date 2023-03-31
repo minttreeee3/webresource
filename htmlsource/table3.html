@@ -12,7 +12,8 @@
     </style>
   </head>
   <body>
-    <!-- <caption> : 테이블 제목 -->
+    <!-- <caption> : 테이블 제목(가운데정렬이 기본)
+      <figcaption> : 테이블이랑 상관없이 써도 제목붙이듯이... 왼쪽정렬 -->
     <table border="1">
       <caption>
         <strong>테이블</strong>
@@ -33,8 +34,44 @@
       </tr>
     </table>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-    velit aut consequuntur culpa odio nulla cupiditate nihil fugit autem, est
-    id, necessitatibus quibusdam facilis a voluptas ullam totam. Amet, numquam?
+    <table border="1">
+      <figcaption>
+        <strong>테이블</strong>
+      </figcaption>
+      <tr>
+        <th>이름</th>
+        <td></td>
+        <th>연락처</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>주소</th>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <th>자기소개</th>
+        <td colspan="3"></td>
+      </tr>
+    </table>
+
+    <figcaption>
+      <strong>테이블</strong>
+    </figcaption>
+    <table border="1">
+      <tr>
+        <th>이름</th>
+        <td></td>
+        <th>연락처</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>주소</th>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <th>자기소개</th>
+        <td colspan="3"></td>
+      </tr>
+    </table>
   </body>
 </html>
