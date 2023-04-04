@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #ddd;
+      }
+      .box {
+        background-color: white;
+        /* height: 50px;
+            overflow: auto;  overflow : 부모보다 넘치는 부분 처리해줌 (auto:스크롤생김, hidden:잘라버림, visible:넘친부분 그대로 보여주기-기본) */
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      p {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="left-arrow.png" alt="왼쪽 화살표" class="left" />
+      <img src="right-arrow.png" alt="오른쪽 화살표" class="right" />
+    </div>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, cum
+      perferendis numquam officiis et adipisci illo expedita accusamus hic
+      veniam autem beatae neque assumenda odio nam nobis aspernatur pariatur
+      deleniti?
+    </p>
+  </body>
+</html>

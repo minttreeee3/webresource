@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 50px;
+        background: blueviolet;
+        margin: 10px; /* 바깥쪽 여백 */
+
+        display: inline-block; /* 블럭 속성을 인라인+블럭 양쪽 속성 다 갖게 변환시킴 */
+      }
+      span {
+        width: auto;
+        height: auto;
+        background: red;
+      }
+      p {
+        text-align: center;
+      }
+      p a {
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        line-height: 40px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div 
+        블럭 요소 : width : 100% 개념, height : 0 (내용없어도 width,height 임의의 값 가능)
+
+        span
+        인라인 요소 : width : 0, height : 0 ==> 내용에 따라 변화 (width,height 임의로 줄 수 없음, 무조건 내용만큼만)
+
+        display: inline-block; (inline+block)
+        ==> 양쪽 속성 다 갖고옴 : 옆으로 나열하면서 + 내용없이도 임의의 값 가능
+
+        display: none; => 안보이게함
+    
+    -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <span></span>
+    <p>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+    </p>
+    <div class="hidden">Hidden Area</div>
+  </body>
+</html>
