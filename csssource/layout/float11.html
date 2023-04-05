@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 960px;
+            background-color: #ccc;
+            margin: 0 auto; /* 가로 가운데에 두기위해서 */
+        }
+        .header h1 {
+            float: left;            
+        }
+        .header nav {            
+            float: right;    /* li에 float:right하면 순서거꾸로되는데 nav에 하면 원래순서대로 오른쪽정렬됨... ?? */
+        }
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin-left: 20px;
+            line-height: 60px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header class="header clearfix">
+        <h1><a href="#">Logo</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Member Join</a></li>
+                <li><a href="#">Site map</a></li>
+                <li><a href="#">Location</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

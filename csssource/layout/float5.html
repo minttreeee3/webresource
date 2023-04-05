@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: #ffd800;
+        margin-right: 10px;
+        float: left;
+      }
+      .box1 {
+        width: 150px;
+        height: 150px;
+        background: red;
+        margin-right: 10px;
+        border: 1px solid black;
+      }
+      .clearfix::after {
+        /* clearfix(float로 흐르는것들을 하나로 묶은 클래스) 다음에 가상의 빈 요소를 넣어서 float를 해제함, 블럭 속성 갖도록 */
+        content: "";
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="box">박스1</div>
+      <div class="box">박스2</div>
+      <div class="box">박스3</div>
+    </div>
+    <div class="box1">박스4</div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A libero sed
+      consectetur hic commodi natus fuga porro eos quisquam. Praesentium ipsam,
+      ratione provident maiores similique explicabo dolores. Alias, laboriosam
+      quaerat.
+    </p>
+  </body>
+</html>

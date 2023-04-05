@@ -12,7 +12,9 @@
       .box {
         background-color: white;
         /* height: 50px;
-            overflow: auto;  overflow : 부모보다 넘치는 부분 처리해줌 (auto:스크롤생김, hidden:잘라버림, visible:넘친부분 그대로 보여주기-기본) */
+            overflow: auto;  overflow : 부모보다 넘치는 부분 처리해줌 (auto:스크롤생김, hidden:잘라버림, visible:넘친부분 그대로 보여주기-기본)             
+            */
+        overflow: hidden;
       }
       .left {
         float: left;
@@ -23,12 +25,20 @@
       p {
         border: 2px solid black;
       }
+      .clearfix {
+        clear: both; /* clear:left; clear:right;  여기부턴 float를 해제하겠다 */
+      }
     </style>
   </head>
   <body>
+    <!-- 
+          float 속성 해제 => clear : both;
+                            oveflow : hidden;
+      -->
     <div class="box">
       <img src="left-arrow.png" alt="왼쪽 화살표" class="left" />
       <img src="right-arrow.png" alt="오른쪽 화살표" class="right" />
+      <div class="clearfix">Awesome!!</div>
     </div>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, cum

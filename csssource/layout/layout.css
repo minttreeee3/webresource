@@ -1,0 +1,35 @@
+/* 모든 div 테두리표시  : 1,실선,#ccc */
+/* container의 너비 960, 안쪽여백 20, 화면중앙배치 */
+/* header : 안쪽여백 20, 아래쪽바깥여백 20 */
+/* 본문 : 왼쪽배치, 안쪽여백 20, 아래쪽 바깥여백 20*/
+/* 사이드바 : 오른쪽배치, 너비 220, 안쪽여백 20, 아래쪽 바깥여백 20 */
+/* 푸터 : float 요소 해제, 안쪽여백 20 */
+
+div {
+  border: 1px solid #ccc;
+}
+#container {
+  width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+}
+#header {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#contents {
+  float: left;
+  width: 620px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#sidebar {
+  float: right;
+  width: 220px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#footer {
+  clear: both;
+  padding: 20px;
+}

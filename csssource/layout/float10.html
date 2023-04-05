@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        background-color: #333;
+      }
+      .active {
+        background-color: red;
+      }
+      ul li {
+        list-style: none;
+        float: left;
+      }
+      li a {
+        display: inline-block; /* 패딩 적용시키기 위해선 이거해야됨 */
+        text-decoration-line: none;
+        color: white;
+        padding: 14px 16px;
+      }
+
+      a:hover {
+        background-color: blueviolet;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu clearfix">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </body>
+</html>
