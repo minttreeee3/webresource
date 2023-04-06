@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        /* flex-wrap: wrap-reverse; */
+      }
+      .container .item {
+        width: 200px;
+        height: 100px;
+        border: 4px dashed black;
+      }
+      .container .item:first-child {
+        background-color: red;
+        order: 4;
+      }
+      .container .item:nth-child(2) {
+        background-color: blue;
+        order: 2;
+      }
+      .container .item:nth-child(3) {
+        background-color: blueviolet;
+        order: 1;
+      }
+      .container .item:nth-child(4) {
+        background-color: green;
+        order: 5;
+      }
+      .container .item:last-child {
+        background-color: yellow;
+        order: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        flex : 배치되어야 할 요소들을 플렉스 컨테이너로 묶어야 함
+        display:flex;
+        flex-direction: row(기본) | row-reverse | column | column-reverse; 배치방향
+        flex-wrap: wrap; no-wrap(기본) | wrap(여러줄로 표시) | wrap-reverse(여러줄로 표시되는데 반대로 내려감)
+        order: 배치 순서 정할 수 있음
+
+
+
+        수직 => 수평
+        1. display:inline-block;
+        2. float:left or right; 
+        3. flex 
+    -->
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+    </div>
+  </body>
+</html>

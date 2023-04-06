@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        /* 모든 요소의 크기는 border 포함 */
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans";
+        background-color: #ecf0f1;
+      }
+      .wrapper {
+        width: 100%;
+        margin: 2rem auto;
+        max-width: 60rem; /* 기본폰트크기 16px * 60 */
+      }
+      .flexbg {
+        display: flex; /* 가로로 배치 */
+      }
+      .flexbg main {
+        order: 2;
+        width: 60%;
+        padding: 1.618rem;
+      }
+      .flexbg .sidebar {
+        color: white;
+        width: 20%;
+        padding: 1.618rem;
+      }
+      .flexbg .left {
+        order: 1;
+        background-color: #0098be;
+      }
+      .flexbg .right {
+        order: 3;
+        background-color: #015266;
+      }
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          order: 1;
+          width: 100%;
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam id
+          eos eaque consequuntur placeat neque architecto. Aut ipsam fuga
+          eligendi velit iure? Optio itaque molestias qui, sapiente, mollitia
+          asperiores repellat natus quisquam excepturi doloribus illum explicabo
+          possimus impedit fuga obcaecati illo iure. Esse enim, molestiae
+          delectus ex vel natus quas!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam id
+          eos eaque consequuntur placeat neque architecto. Aut ipsam fuga
+          eligendi velit iure? Optio itaque molestias qui, sapiente, mollitia
+          asperiores repellat natus quisquam excepturi doloribus illum explicabo
+          possimus impedit fuga obcaecati illo iure. Esse enim, molestiae
+          delectus ex vel natus quas!
+        </p>
+      </main>
+      <aside class="sidebar left">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In explicabo
+        accusamus delectus repellendus quod quasi voluptatum sint, placeat vero
+        ipsam nesciunt voluptate voluptatem omnis libero dolor, eligendi rerum?
+        Quisquam, voluptates?
+      </aside>
+      <aside class="sidebar right">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In explicabo
+        accusamus delectus repellendus quod quasi voluptatum sint, placeat vero
+        ipsam nesciunt voluptate voluptatem omnis libero dolor, eligendi rerum?
+        Quisquam, voluptates?
+      </aside>
+    </div>
+  </body>
+</html>

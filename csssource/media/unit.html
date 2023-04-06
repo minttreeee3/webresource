@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        font-size: 12px;
+      }
+      body {
+        font-size: 18px;
+      }
+      h1 {
+        font-size: 1.5em; /*  16px * 1.5  => body에서 font-size를 다르게 주면 바뀌게됨 */
+      }
+      h2 {
+        font-size: 1.2rem; /* rem은 :root가 지정해주는 font-size를 따라감 */
+      }
+      p {
+        /* width: 800px;  */
+        width: 80%;
+        font-size: 1em;
+      }
+      p span {
+        font-size: 0.8em;
+      }
+      .box {
+        float: left;
+        margin-right: 20px;
+        background-color: blue;
+        color: #fff;
+        text-align: center;
+      }
+      .box_px {
+        width: 160px;
+        height: 160px;
+      }
+      .box_em {
+        width: 10em; /* body폰트크기 * 10em */
+        height: 10em;
+      }
+      .box_rem {
+        width: 10rem; /* :root폰트크기 * 10rem */
+        height: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        크기 단위 : px, %, em, rem 
+        1) px : 고정단위
+                브라우저의 크기를 줄이면 스크롤이 발생
+        2) % : 상대단위
+        3) em : em단위가 쓰여진 곳의 폰트사이즈 배수 
+
+    -->
+    <h1>css 기본 단위</h1>
+    <h2>단위</h2>
+    <p>
+      <span>Lorem ipsum</span> dolor sit amet consectetur adipisicing elit.
+      Officiis beatae illum quae exercitationem veritatis soluta, vero
+      blanditiis sit sed rem ut pariatur dicta fuga dolore fugiat illo, ex esse
+      nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+      repellat recusandae distinctio odio maiores. Quae, rerum? Facilis, quos.
+      Fuga autem fugiat praesentium debitis delectus, veniam perspiciatis ad
+      aliquid nesciunt magnam.
+    </p>
+    <div class="wrapper">
+      <div class="box box_px">PX</div>
+      <div class="box box_em">EM</div>
+      <div class="box box_rem">REM</div>
+    </div>
+  </body>
+</html>
