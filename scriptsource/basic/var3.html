@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var : 변수 재선언 가능, 할당, 함수레벨 스코프
+        // 함수 => 단독으로 실행,  메소드 => 객체 생성, 생성 후 호출 
+        function foobar() {
+            var foo = 5;
+            console.log(foo);
+        }
+        foobar(); //함수호출
+
+        // console.log(foo);  caught ReferenceError: foo is not defined 
+        // 함수안에서 선언된 변수를 사용 =>에러남
+
+
+        if(true) {
+            var a = 6;
+            console.log("블럭 내부 ", a);
+        }
+        console.log("블럭 외부 ", a);
+
+
+        // let : 변수 재선언 불가, 할당, 블록레벨 스코프(블록내에서 쓰고 소멸됨)
+        function foobar() {
+            let foo1 = 5;
+            console.log(foo1);
+        }
+        // console.log(foo1);  caught ReferenceError: foo1 is not defined 
+        // 함수안에서 선언된 변수를 사용 =>에러남
+
+        if(true) {
+            let b = 6;
+            console.log("블럭 내부 ", b);
+        }
+        // console.log("블럭 외부 ", b);  caught ReferenceError: b is not defined
+        // var와 달리 이것도 에러남 (블록레벨 스코프)
+
+        let b = 7;  //블럭내부에서 선언했던거랑 별개니까(지역변수)  밖에서 하는건 재선언이 아님, 에러안남
+        console.log("새로 선언 ", b);
+    </script>
+</body>
+</html>
