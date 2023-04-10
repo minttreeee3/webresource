@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function info() {
+        // 소문자로 영문 입력받기 ==> 대문자로 변경 출력
+        // 전화번호 입력받기(010-1234-4567) ==> 010-####-4567 출력
+        let name = prompt("이름을 입력해 주세요", "영어(소문자)");
+        let tel = prompt("전화번호를 입력해 주세요", "010-0000-0000");
+        document.write("이름 : " + name.toUpperCase() + "<br>");
+        document.write("전화번호 : " + tel.replace(tel.slice(4, 8), "####"));
+      }
+
+      // info();
+
+
+      // emailCheck() 
+      // 이메일 입력 받은 후 이메일에 @ 포함되어 있는지 확인
+      function emailCheck() {
+        let email = prompt("이메일을 입력해 주세요");
+        if (email.match("@")==null) {  // indexOf == -1 
+            alert("이메일 형식을 확인해 주세요");
+            emailCheck();
+        } else {
+            document.write(email);
+        }
+      }
+
+      emailCheck();
+    </script>
+  </body>
+</html>
