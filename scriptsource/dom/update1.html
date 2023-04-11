@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header" class="one two">Header 1</h1>
+    <script>
+        // .classList. : 클래스 값 변경
+        // class 변경
+        let h1 = document.getElementById("header");
+        // 전체 클래스명 => one, two 
+        console.log(h1.classList);
+
+        // 특정 클래스명 변경
+        h1.classList.replace("one", "header"); // one을 header로
+
+        // 클래스 추가
+        h1.classList.add("three");
+
+        // 추가를 할 때 클래스명이 존재한다면 안 붙이고, 없을 때만 추가 
+        h1.classList.toggle("four"); //추가됨
+        h1.classList.toggle("two"); //추가안됨
+
+        // 클래스 이름 제거
+        h1.classList.remove("two");
+    </script>
+</body>
+</html>

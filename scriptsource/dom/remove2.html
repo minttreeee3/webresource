@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header" class="header">Header 1</h1>
+    <h2 id="header2" class="header">Header 2</h2>
+    <div id="top">
+      <div id="nested">내용</div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+        quibusdam distinctio quasi tempore ipsa optio eos, totam dolor.
+        Repudiandae obcaecati quo eius nobis atque a ipsum alias soluta
+        dignissimos fugiat!
+      </p>
+    </div>
+    <script>
+      const h1 = document.querySelector("h1");
+      //setAttribute(), removeAttribute() 속성 넣기/지우기
+      h1.removeAttribute("class"); //제거할 속성명 (클래스명이 아니라)
+
+      const h2 = document.querySelector("h2");
+      h2.removeAttribute("id"); //제거된건 콘솔창 element에서 확인할수있음 
+
+      //내용지우기
+      h2.innerHTML = ""; //공백으로 넣어버리면... 
+    </script>
+  </body>
+</html>

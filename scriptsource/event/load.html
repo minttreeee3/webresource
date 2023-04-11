@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 스크립트가 head에 들어올때, 미리 실행되지말고, body가 자리를 잡은 후에 실행시키려고 window.onload 
+        window.onload = function() {
+            var button = document.getElementById("button");
+            button.addEventListener("click", function () {
+              alert("hello");
+            });
+        };
+    </script>
+</head>
+<body>
+    <button type="button" id="button">클릭</button>
+</body>
+</html>

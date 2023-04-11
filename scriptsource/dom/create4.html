@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Simple HTML</h1>
+    </header>
+    <div id="content">
+      <p>This is a <i>simple</i> HTML file.</p>
+    </div>
+    <div class="callout">
+      <p>This is as fancy as we'll get!</p>
+    </div>
+    <p>
+      IDs (such as <span class="code">#content</span>) can be used on many
+      elements
+    </p>
+    <p>
+      Classes (such as <span class="code">.callout</span>) can be used on many
+      elements
+    </p>
+    <div id="callout2" class="callout fancy">
+      <p>A single HTML element can have multiple classes.</p>
+    </div>
+    <script>
+      // 두 개의 p를 생성한다.
+      // <p>I was created dynamically</p>
+      const p1 = document.createElement("p");
+    //   const content1 = document.createTextNode("I was created dynamically");
+    //   p1.appendChild(content1);
+
+      p1.innerText ="I was created dynamically";
+
+
+      // <p>I was also created dynamically!!</p>
+      const p2 = document.createElement("p");
+    //   const content2 = document.createTextNode("I was also created dynamically!!");
+    //   p2.appendChild(content2);
+      p2.innerText = "I was also created dynamically!!";
+
+
+      // content의 현재 자식을 기준으로 하나는 앞쪽에, 하나는 뒤쪽에 삽입
+      const con1 = document.getElementById("content");
+      const con2 = document.querySelector("#content > p");
+      console.log(con1);
+      con1.insertBefore(p1, con2);
+      con1.appendChild(p2);
+    </script>
+  </body>
+</html>
