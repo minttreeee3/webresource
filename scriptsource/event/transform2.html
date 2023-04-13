@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        width: 300px;
+        height: 150px;
+        border: 2px solid black;
+
+        overflow: hidden; /* container 크기 넘어가면 안보이게 */
+      }
+      .wrap {
+        width: 600px;
+
+        transform: translate(0);
+        transition: all 0.5s;
+      }
+      .box {
+        width: 300px;
+        height: 150px;
+        float: left;
+      }
+      .box1 {
+        background: yellow;
+      }
+      .box2 {
+        background: red;
+      }
+      .box3 {
+        background: green;
+      }
+      .box4 {
+        background: blue;
+      }
+      .box5 {
+        background: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <div class="box box1">Box1</div>
+        <div class="box box2">Box2</div>
+        <div class="box box3">Box3</div>
+        <div class="box box4">Box4</div>
+        <div class="box box5">Box5</div>
+      </div>
+    </div>
+    <div class="btn-area">
+      <button type="button" class="prev">이전</button>
+      <button type="button" class="next">다음</button>
+    </div>
+    <script>
+      // 캐러셀 움직일 때
+      // -size * 인덱스
+      const wrap = document.querySelector(".wrap");
+
+      let index = 0; 
+
+      // 이전 클릭시 박스위치를 이동
+      document.querySelector(".prev").addEventListener("click", () => {
+        if(index == 0) return;
+
+        index -= 1;  // 이전 클릭 = 인덱스가 1씩 감소한다는 뜻 
+        wrap.style.transform = `translate(-${300 * index}px)`; //문자,숫자 섞여있어서 ``
+      });
+
+      // 다음 클릭시 박스위치 이동
+      document.querySelector(".next").addEventListener("click", () => {
+        if(index == 4) return;
+
+        index += 1;
+        wrap.style.transform = `translate(-${300 * index}px)`;
+      });
+    </script>
+  </body>
+</html>

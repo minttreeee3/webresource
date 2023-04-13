@@ -33,3 +33,7 @@ ul.list::after {
     display: none; /*아예 자리도 없어짐*/
     padding: 10px;
 }
+
+.show {
+  display: block; /* 보이게됨 */
+}
