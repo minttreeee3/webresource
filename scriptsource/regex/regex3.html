@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" placeholder="이름" maxlength="4"/>
+        </div>
+        <div>
+            <label for="email">이메일</label>
+            <input type="text" name="email" id="email" placeholder="email" />
+        </div>
+        <div>
+            <label for="tel">전화번호</label>
+            <input type="text" name="tel" id="tel" placeholder="-를 제외한 숫자를 입력해 주세요"/>
+            <span id="result"></span>
+        </div>
+        <div>
+            <button type="button">확인</button>
+        </div>
+    </form>
+    <script>
+        // 메일주소 abc@naver.com   -공백이면 안된다는 뜻으로 \S 
+        const email = /\S+@\S+\.\S+/;
+        // 값이 비어있거나 패턴에 맞는지 확인 
+        document.querySelector("#email").addEventListener("change", (e) => {
+            if(!email.test(e.target.value) || e.target.value=="") {
+                alert("이메일을 확인해 주세요");
+                e.target.select();
+            }
+        });
+
+
+
+        // 이름에 한글이 입력되었는지 확인
+        const regex = /^[가-힣]{2,4}$/;
+        document.querySelector("#name").addEventListener("change",(e) => {
+            const name = e.target.value;
+            if(!regex.test(name)) {
+                alert("이름을 확인해 주세요");
+            }
+            e.target.select();
+        });
+
+
+
+
+
+        const re = /^\d{3}\d{4}\d{4}$/;        
+        // 확인 버튼을 클릭하면 사용자가 입력한 전화번호를 가지고 오기
+        // document.querySelector("button").addEventListener("click", () => {
+        //     const tel = document.querySelector("#tel").value;
+            
+        //     // 전화번호와 규칙이 일치하는지 확인한 후 메세지 보여주기            
+        //     if(!re.test(tel)) {
+        //         document.querySelector("#result").innerHTML = "-를 제외한 숫자를 입력해 주세요";
+        //     }
+        // });
+
+
+        // 전화번호 입력이 끝났을때 정규식패턴 확인
+        document.querySelector("#tel").addEventListener("change", (e) => {
+            const tel = e.target.value;
+            
+            // 전화번호와 규칙이 일치하는지 확인한 후 메세지 보여주기            
+            if(!re.test(tel)) {
+                document.querySelector("#result").innerHTML = "-를 제외한 숫자를 입력해 주세요";
+            } else {
+                document.querySelector("#result").innerHTML = "";
+            }
+        });
+    </script>
+</body>
+</html>
