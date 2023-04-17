@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header" class="one two">Header 1</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        // .classList. : 클래스 값 변경
+        // class 변경
+        let h1 = $("#header");
+        // 전체 클래스명 => one, two 
+        console.log(h1.classList);
+
+        // 특정 클래스명 변경
+
+        // 클래스 추가
+        h1.addClass("red");
+
+        // 추가를 할 때 클래스명이 존재한다면 삭제, 없을 때만 추가 
+        h1.toggleClass("green"); //추가됨
+        h1.toggleClass("two"); //삭제됨
+
+        // 클래스 이름 제거
+        h1.removeClass("one");
+
+        // 특정 클래스를 갖고있는지 질문 => true/false로 출력
+        console.log(h1.hasClass("red"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table id="outside">
+        <tr>
+            <td id="t1">one</td>
+        </tr>
+        <tr>
+            <td id="t2">two</td>
+        </tr>
+    </table>
+    <p id="demo">Click me</p>
+    <a href="#">여기로</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        // 테이블 전체 클릭시 two <-> three 번갈아가면서 보이기
+
+        // 이벤트 대상 찾아오기
+        const table = $("#outside");
+
+        // 이벤트 핸들러 연결
+        table.on("click", function() {
+            // two를 가지고있는 td요소 가져오기
+            const t2 = $("#t2");
+            // td요소안의 text가 무엇인지 확인
+            const isThree = t2.text() === "three";
+            // text변경
+            t2.text(isThree ? "two" : "three");
+        });
+
+        
+        // 변수에 안담고 바로 이어서 하기 
+        $("#demo").on("click", function(e) {
+            console.log(e.target);
+            // jquery에서는 e.target 대신 $(this)를 사용함 
+            $(this).text("Good Job!!");
+        });
+
+    </script>
+</body>
+</html>

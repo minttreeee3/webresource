@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>List Item1</li>
+        <li>List Item2</li>
+        <li>List Item3</li>
+        <li>List Item4</li>
+        <li>List Item5</li>
+    </ul>
+    <!-- jquery 사용을 위해 라이브러리 가져오기! 이거 삽입 안하면 $ 사용 못함 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        // 요소 찾기 => 여러개 요소라면 HTMLCollection or NodeList 리턴 됨 (유사배열)
+        // 1. 아이디로 찾기 
+        // 2. 태그명으로 찾기
+        const lis = $("li");
+        console.log(lis); //HTMLCollection ==> document.getElementsByTagName() 
+        console.log(lis[0]); 
+        
+
+        // 첫번째 li의 텍스트 노드 값
+        // console.log(lis[0].text());  ==>에러남. text()를 forEach로 돌릴 수 없음 
+        // document.getElementsByTagName() ==> HTMLCollection으로 리턴(forEach못씀)
+        // document.querySelectorAll() ==> NodeList로 리턴(forEach 쓸수있음)
+
+
+        $.each(lis, function(idx, item) {
+            console.log(idx);
+            console.log(item);
+            console.log($(this).text());
+        });
+
+        // 세번째 li
+        console.log(lis[2]);
+        
+    </script>
+</body>
+</html>
